@@ -49,4 +49,7 @@ message AppendEntriesRequest {
 
 message AppendEntriesResponse {
     uint64 Term = 1;
+    bool Success = 2;
+    uint64 ConflictTerm = 3;
+    uint64 ConflictIndex = 4;
 }
